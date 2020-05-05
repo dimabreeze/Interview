@@ -12,15 +12,11 @@ namespace
 
 	Rect intersection( Rect r1, Rect r2 )
 	{
-		Rect res {
-			std::max( r1.left, r2.left ),   //l
-			std::min( r1.right, r2.right ), //r
-			std::min( r1.top, r2.top ),     //t
-			std::max( r1.bottom, r2.bottom )//b
-		};
-		if (res.top < res.bottom) res.top = res.bottom;
-		if (res.right < res.left) res.right = res.left;
-		return res;
+		r1.left = std::max( r1.left, r2.left );                  //l
+		r1.right = std::max( std::min( r1.right, r2.right ), r1.left ); //r
+		r1.bottom = std::max( r1.bottom, r2.bottom );                  //b
+		r1.top = std::max( std::min( r1.top, r2.top ), r1.bottom );   //t
+		return r1;
 	}
 
 	int area( Rect r )
@@ -28,9 +24,9 @@ namespace
 		return (r.top - r.bottom) * (r.right - r.left);
 	}
 
-	Rect rect( int A, int B, int C, int D ) //int E, int F, int G, int H
+	Rect toRect( int A, int B, int C, int D ) //int E, int F, int G, int H
 	{
-		return Rect {
+		return Rect{
 			/*l*/ A,
 			/*r*/ C,
 			/*t*/ D,
@@ -42,8 +38,8 @@ namespace
 using namespace Leetcode::LC223M;
 
 int Solution::computeArea( int A, int B, int C, int D, int E, int F, int G, int H ) const {
-	const Rect r1 = rect( A, B, C, D );
-	const Rect r2 = rect( E, F, G, H );
+	const Rect r1 = toRect( A, B, C, D );
+	const Rect r2 = toRect( E, F, G, H );
 
 	return area( r1 ) - area( intersection( r1, r2 ) ) + area( r2 );
 }
