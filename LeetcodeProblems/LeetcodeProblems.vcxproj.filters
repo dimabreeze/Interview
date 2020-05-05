@@ -27,7 +27,7 @@
     <ClInclude Include="84H_Largest_Rectangle_in_Histogram.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="223M_Rectangle_Overlap.h">
+    <ClInclude Include="223M_Rectangle_Area.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,7 +44,7 @@
     <ClCompile Include="84H_Largest_Rectangle_in_Histogram.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="223M_Rectangle_Overlap.cpp">
+    <ClCompile Include="223M_Rectangle_Area.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

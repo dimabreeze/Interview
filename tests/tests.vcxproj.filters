@@ -45,7 +45,7 @@
     <ClCompile Include="test_84H_Largest_Rectangle_in_Histogram.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
-    <ClCompile Include="test_223M_Rectangle_Overlap.cpp">
+    <ClCompile Include="test_223M_Rectangle_Area.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
   </ItemGroup>

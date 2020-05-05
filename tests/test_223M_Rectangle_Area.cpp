@@ -1,10 +1,10 @@
 #include <catch2/catch.hpp>
-#include "LeetcodeProblems\223M_Rectangle_Overlap.h"
+#include "LeetcodeProblems\223M_Rectangle_Area.h"
 
 using namespace Leetcode;
 using namespace LC223M;
 
-TEST_CASE( "Leetcode #223: Rectangle Overlap", "[leetcode][medium]" )
+TEST_CASE( "Leetcode #223: Rectangle Area", "[leetcode][medium]" )
 {
 	Solution s;
 	CHECK( s.computeArea( 0, 0, 0, 0, 0, 0, 0, 0 ) == 0 );
