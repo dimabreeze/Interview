@@ -24,6 +24,9 @@
     <ClInclude Include="76M_Minimum_Window_Substring.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="84H_Largest_Rectangle_in_Histogram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetcodeProblems.cpp">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="76M_Minimum_Window_Substring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="84H_Largest_Rectangle_in_Histogram.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

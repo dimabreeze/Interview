@@ -152,11 +152,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="76M_Minimum_Window_Substring.h" />
+    <ClInclude Include="84H_Largest_Rectangle_in_Histogram.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="76M_Minimum_Window_Substring.cpp" />
+    <ClCompile Include="84H_Largest_Rectangle_in_Histogram.cpp" />
     <ClCompile Include="LeetcodeProblems.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
