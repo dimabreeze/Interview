@@ -63,6 +63,9 @@
     <ClCompile Include="test_415E_Add_Strings.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
+    <ClCompile Include="989E_Add_to_Array_Form_of_Integer.cpp">
+      <Filter>Test_LeetcodeProblems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Minimal.runsettings" />
