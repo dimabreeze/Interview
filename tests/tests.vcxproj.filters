@@ -60,6 +60,9 @@
     <ClCompile Include="test_621M_Task_Scheduler.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
+    <ClCompile Include="test_415E_Add_Strings.cpp">
+      <Filter>Test_LeetcodeProblems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Minimal.runsettings" />

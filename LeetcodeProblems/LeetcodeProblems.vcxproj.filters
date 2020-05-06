@@ -42,6 +42,9 @@
     <ClInclude Include="621M_Task_Scheduler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="415E_Add_Strings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetcodeProblems.cpp">
@@ -69,6 +72,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="621M_Task_Scheduler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="415E_Add_Strings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
