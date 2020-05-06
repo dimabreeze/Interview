@@ -54,6 +54,9 @@
     <ClCompile Include="test_953E_Verifying_an_Alien_Dictionary.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
+    <ClCompile Include="test_311M_Sparse_Matrix_Multiplication.cpp">
+      <Filter>Test_LeetcodeProblems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Minimal.runsettings" />

@@ -36,6 +36,9 @@
     <ClInclude Include="953E_Verifying_an_Alien_Dictionary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="311M_Sparse_Matrix_Multiplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetcodeProblems.cpp">
@@ -57,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="953E_Verifying_an_Alien_Dictionary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="311M_Sparse_Matrix_Multiplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
