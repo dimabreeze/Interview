@@ -39,12 +39,18 @@
     <ClInclude Include="CompressString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HashSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructures.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HashSet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
