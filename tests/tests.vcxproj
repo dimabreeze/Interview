@@ -160,6 +160,7 @@
     <ClCompile Include="test_57H_Insert_Interval.cpp" />
     <ClCompile Include="test_76M_Minimum_Window_Substring.cpp" />
     <ClCompile Include="test_84H_Largest_Rectangle_in_Histogram.cpp" />
+    <ClCompile Include="test_953E_Verifying_an_Alien_Dictionary.cpp" />
     <ClCompile Include="test_BinaryTree.cpp" />
     <ClCompile Include="test_CompressString.cpp" />
     <ClCompile Include="test_Heap.cpp" />
