@@ -159,6 +159,7 @@
     <ClCompile Include="test_223M_Rectangle_Area.cpp" />
     <ClCompile Include="test_311M_Sparse_Matrix_Multiplication.cpp" />
     <ClCompile Include="test_57H_Insert_Interval.cpp" />
+    <ClCompile Include="test_621M_Task_Scheduler.cpp" />
     <ClCompile Include="test_76M_Minimum_Window_Substring.cpp" />
     <ClCompile Include="test_84H_Largest_Rectangle_in_Histogram.cpp" />
     <ClCompile Include="test_953E_Verifying_an_Alien_Dictionary.cpp" />

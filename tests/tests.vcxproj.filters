@@ -57,6 +57,9 @@
     <ClCompile Include="test_311M_Sparse_Matrix_Multiplication.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
+    <ClCompile Include="test_621M_Task_Scheduler.cpp">
+      <Filter>Test_LeetcodeProblems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Minimal.runsettings" />

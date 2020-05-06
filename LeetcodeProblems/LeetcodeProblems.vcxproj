@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="311M_Sparse_Matrix_Multiplication.h" />
     <ClInclude Include="57H_Insert_Interval.h" />
+    <ClInclude Include="621M_Task_Scheduler.h" />
     <ClInclude Include="76M_Minimum_Window_Substring.h" />
     <ClInclude Include="84H_Largest_Rectangle_in_Histogram.h" />
     <ClInclude Include="223M_Rectangle_Area.h" />
@@ -174,6 +175,7 @@
     </ClCompile>
     <ClCompile Include="953E_Verifying_an_Alien_Dictionary.cpp" />
     <ClCompile Include="311M_Sparse_Matrix_Multiplication.cpp" />
+    <ClCompile Include="621M_Task_Scheduler.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
