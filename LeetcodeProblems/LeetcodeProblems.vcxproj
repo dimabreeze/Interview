@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="57H_Insert_Interval.h" />
     <ClInclude Include="76M_Minimum_Window_Substring.h" />
     <ClInclude Include="84H_Largest_Rectangle_in_Histogram.h" />
     <ClInclude Include="223M_Rectangle_Area.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="57H_Insert_Interval.cpp" />
     <ClCompile Include="76M_Minimum_Window_Substring.cpp" />
     <ClCompile Include="84H_Largest_Rectangle_in_Histogram.cpp" />
     <ClCompile Include="223M_Rectangle_Area.cpp" />

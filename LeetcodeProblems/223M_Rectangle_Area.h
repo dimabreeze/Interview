@@ -10,6 +10,9 @@ https://leetcode.com/problems/rectangle-area/
 Find the total area covered by two rectilinear rectangles in a 2D plane.
 Each rectangle is defined by its bottom left corner and top right corner as shown in the figure.
 
+Note:
+Assume that the total area is never beyond the maximum possible value of int.
+-------------
 Example 1:
 Input: 
 -3
@@ -21,7 +24,7 @@ Input:
 9
 2
 Output: 45
-
+-------------
 Example 2:
 Input: 
 0
@@ -32,9 +35,9 @@ Input:
 0
 50000
 40000
-Output: 
+Output: 50000*40000
 
-
+-------------
 Submission: https://leetcode.com/submissions/detail/334974518/
 */
 		struct Solution {

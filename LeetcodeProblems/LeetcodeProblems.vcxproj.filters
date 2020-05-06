@@ -30,6 +30,9 @@
     <ClInclude Include="223M_Rectangle_Area.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="57H_Insert_Interval.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetcodeProblems.cpp">
@@ -45,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="223M_Rectangle_Area.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="57H_Insert_Interval.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

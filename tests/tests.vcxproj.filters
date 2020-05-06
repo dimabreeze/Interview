@@ -48,6 +48,9 @@
     <ClCompile Include="test_223M_Rectangle_Area.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
+    <ClCompile Include="test_57H_Insert_Interval.cpp">
+      <Filter>Test_LeetcodeProblems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Minimal.runsettings" />
