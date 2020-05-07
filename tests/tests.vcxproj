@@ -156,7 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="989E_Add_to_Array_Form_of_Integer.cpp" />
+    <ClCompile Include="test_989E_Add_to_Array_Form_of_Integer.cpp" />
     <ClCompile Include="test_223M_Rectangle_Area.cpp" />
     <ClCompile Include="test_311M_Sparse_Matrix_Multiplication.cpp" />
     <ClCompile Include="test_415E_Add_Strings.cpp" />
@@ -165,8 +165,10 @@
     <ClCompile Include="test_76M_Minimum_Window_Substring.cpp" />
     <ClCompile Include="test_84H_Largest_Rectangle_in_Histogram.cpp" />
     <ClCompile Include="test_953E_Verifying_an_Alien_Dictionary.cpp" />
+    <ClCompile Include="test_56M_Merge_Intervals.cpp" />
     <ClCompile Include="test_BinaryTree.cpp" />
     <ClCompile Include="test_CompressString.cpp" />
+    <ClCompile Include="test_Fibonacci.cpp" />
     <ClCompile Include="test_Heap.cpp" />
     <ClCompile Include="test_List.cpp" />
     <ClCompile Include="testmain.cpp" />

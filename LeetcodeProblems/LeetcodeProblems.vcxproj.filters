@@ -48,6 +48,9 @@
     <ClInclude Include="989E_Add_to_Array_Form_of_Integer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="56M_Merge_Intervals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetcodeProblems.cpp">
@@ -81,6 +84,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="989E_Add_to_Array_Form_of_Integer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="56M_Merge_Intervals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

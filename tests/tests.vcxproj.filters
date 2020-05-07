@@ -63,7 +63,13 @@
     <ClCompile Include="test_415E_Add_Strings.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
-    <ClCompile Include="989E_Add_to_Array_Form_of_Integer.cpp">
+    <ClCompile Include="test_Fibonacci.cpp">
+      <Filter>Test_LeetcodeProblems</Filter>
+    </ClCompile>
+    <ClCompile Include="test_989E_Add_to_Array_Form_of_Integer.cpp">
+      <Filter>Test_LeetcodeProblems</Filter>
+    </ClCompile>
+    <ClCompile Include="test_56M_Merge_Intervals.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
   </ItemGroup>

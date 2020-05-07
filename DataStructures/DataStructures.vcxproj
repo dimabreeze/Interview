@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="CompressString.h" />
+    <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="HashSet.h" />
     <ClInclude Include="Heap.h" />
