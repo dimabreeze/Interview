@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="273H_Integer_to_English_Words.h" />
     <ClInclude Include="311M_Sparse_Matrix_Multiplication.h" />
     <ClInclude Include="415E_Add_Strings.h" />
     <ClInclude Include="56M_Merge_Intervals.h" />
@@ -182,6 +183,7 @@
     <ClCompile Include="621M_Task_Scheduler.cpp" />
     <ClCompile Include="415E_Add_Strings.cpp" />
     <ClCompile Include="989E_Add_to_Array_Form_of_Integer.cpp" />
+    <ClCompile Include="273H_Integer_to_English_Words.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -51,6 +51,9 @@
     <ClInclude Include="56M_Merge_Intervals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="273H_Integer_to_English_Words.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetcodeProblems.cpp">
@@ -87,6 +90,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="56M_Merge_Intervals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="273H_Integer_to_English_Words.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

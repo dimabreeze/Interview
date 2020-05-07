@@ -72,6 +72,9 @@
     <ClCompile Include="test_56M_Merge_Intervals.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
     </ClCompile>
+    <ClCompile Include="test_273H_Integer_to_English_Words.cpp">
+      <Filter>Test_LeetcodeProblems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Minimal.runsettings" />
