@@ -79,15 +79,14 @@ void dfs_inorder( BinaryTreeNode<T>* root, std::function<bool( BinaryTreeNode<T>
 	auto node = root;
 	while (!s.empty() or node)
 	{
-		if (node)
-		{
+		if (node) //top
+		{   //go left, defer top
 			s.push( node );
 			node = node->left;
 		}
 		else
 		{
-			node = s.top();
-			s.pop();
+			node = s.top(); s.pop();
 			visit( node );
 			node = node->right;
 		}

@@ -156,12 +156,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="BitManipulation.h" />
     <ClInclude Include="CompressString.h" />
+    <ClInclude Include="DisjointSets.h" />
     <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="HashSet.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="ReservoirSampling.h" />
     <ClInclude Include="SinglyLinkedList.h" />
     <ClInclude Include="Trie.h" />
     <ClInclude Include="Utils.h" />

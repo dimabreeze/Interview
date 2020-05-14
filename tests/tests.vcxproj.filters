@@ -18,9 +18,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test_List.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="test_Trie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -31,9 +28,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="test_BinaryTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="testmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="test_CompressString.cpp">
@@ -74,6 +68,16 @@
     </ClCompile>
     <ClCompile Include="test_273H_Integer_to_English_Words.cpp">
       <Filter>Test_LeetcodeProblems</Filter>
+    </ClCompile>
+    <ClCompile Include="testmain.cpp" />
+    <ClCompile Include="test_BitManipulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_SinglyLinkedList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_DisjointSets.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

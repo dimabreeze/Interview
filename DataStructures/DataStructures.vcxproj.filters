@@ -45,6 +45,15 @@
     <ClInclude Include="Fibonacci.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BitManipulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ReservoirSampling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DisjointSets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructures.cpp">
