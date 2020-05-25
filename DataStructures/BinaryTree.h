@@ -6,13 +6,15 @@
 #include <algorithm>
 #include <functional>
 
-template<typename T>
-struct BinaryTreeNode
-{
-	explicit BinaryTreeNode( T t ) : data( t ) {}
-	T data;
-	BinaryTreeNode* left = nullptr;
-	BinaryTreeNode* right = nullptr;
+struct TreeNode {
+	int val = 0;
+	TreeNode* left  = nullptr;
+	TreeNode* right = nullptr;
+	TreeNode( int x = 0, TreeNode* left = nullptr, TreeNode* right = nullptr ) 
+		: val( x )
+		, left( left )
+		, right( right ) 
+	{}
 };
 
 /*
@@ -36,19 +38,18 @@ postorder(node)
 */
 
 
-template<typename T>
-void dfs_preorder( BinaryTreeNode<T>* root, std::function<bool( BinaryTreeNode<T>* )> visit )
+void dfs_preorder( TreeNode* root )
 {
 	if (!root) return;
 
-	using Node = BinaryTreeNode<T>;
+	using Node = TreeNode;
 	std::stack<Node*> s;
 	s.push( root );
 	while (!s.empty())
 	{
 		auto node = s.top();
 		s.pop();
-		visit( node );
+		//visit( node );
 		if (node->right) s.push( node->right );
 		if (node->left) s.push( node->left );
 	}
@@ -69,27 +70,23 @@ iterativePreorder(node)
 */
 }
 
-template<typename T>
-void dfs_inorder( BinaryTreeNode<T>* root, std::function<bool( BinaryTreeNode<T>* )> visit )
+void dfs_inorder( TreeNode* root )
 {
 	if (!root) return;
 
-	using Node = BinaryTreeNode<T>;
-	std::stack<Node*> s;
+	std::stack<TreeNode*> s;
 	auto node = root;
 	while (!s.empty() or node)
 	{
-		if (node) //top
+		while(node) //top
 		{   //go left, defer top
 			s.push( node );
 			node = node->left;
 		}
-		else
-		{
-			node = s.top(); s.pop();
-			visit( node );
-			node = node->right;
-		}
+
+		node = s.top(); s.pop();
+		//visit( node );
+		node = node->right;
 	}
 /*
 iterativeInorder(node)
@@ -105,13 +102,12 @@ iterativeInorder(node)
 */
 }
 
-template<typename T>
-void dfs_postorder( BinaryTreeNode<T>* root, std::function<bool( BinaryTreeNode<T>* )> visit )
+void dfs_postorder( TreeNode* root )
 {
 	if (!root) return;
-	using Node = BinaryTreeNode<T>;
-	std::stack<Node*> s;
-	Node* lastVisited = nullptr;
+
+	std::stack<TreeNode*> s;
+	TreeNode* lastVisited = nullptr;
 	auto node = root;
 	while (!s.empty() or node)
 	{
@@ -129,7 +125,7 @@ void dfs_postorder( BinaryTreeNode<T>* root, std::function<bool( BinaryTreeNode<
 			}
 			else
 			{
-				visit( peeknode );
+				//visit( peeknode );
 				lastVisited = peeknode;
 				s.pop();
 			}
@@ -155,11 +151,11 @@ iterativePostorder(node)
 }
 
 template<typename T>
-void bfs( BinaryTreeNode<T>* root, std::function<bool( BinaryTreeNode<T>* )> visit )
+void bfs( TreeNode* root )
 {
 	if (!root) return;
-	using Node = BinaryTreeNode<T>;
-	std::queue<Node*> q;
+
+	std::queue<TreeNode*> q;
 /*
 levelorder(root)
   q ← empty queue
@@ -180,6 +176,30 @@ levelorder(root)
 		q.pop();
 		if (node->left) q.push( node->left );
 		if (node->right) q.push( node->right );
-		visit( node );
+		//visit( node );
 	}
+}
+
+TreeNode* inorderSuccessor( TreeNode* root, TreeNode* p ) {
+	std::stack<TreeNode*> stack;
+
+	TreeNode* node = root;
+	TreeNode* prev = nullptr;
+	while (!stack.empty() or node)
+	{
+		while (node) //top
+		{
+			stack.push( node );  //defer top
+			node = node->left; //prepare left
+		}
+
+		node = stack.top(); stack.pop();
+
+		if (prev == p)
+			return node;
+		prev = node;
+
+		node = node->right;  //prepare right
+	}
+	return nullptr;
 }

@@ -14,7 +14,7 @@ T clear_ls_bit( T t )
 template<typename T>
 char getbit( T t, unsigned int bitn )
 {
-	return t & (1 << bitn) >> bitn;
+	return (t & (1 << bitn)) >> bitn;
 }
 
 template<typename T>

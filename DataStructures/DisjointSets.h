@@ -1,26 +1,34 @@
 #pragma once
-#include <vector>
+#include <unordered_map>
 
 class DisjointSets
 {
 private:
-	mutable std::vector<size_t> root;
-	mutable std::vector<size_t> size;
-	size_t count_distinct;
+	mutable std::unordered_map<int, int> root;
+	mutable std::unordered_map<int, int> size;
+	int count_distinct = 0;
 public:
-	size_t CreateSet()
+	int CreateSet( int idx )
 	{
-		auto i = root.size();
-		root.push_back( i );
-		size.push_back( 1 );
+		if (idx < 0) return -1;
+		if (HasSet( idx )) return idx;
+
+		root[idx] = idx;
+		size[idx] = 1;
 		++count_distinct;
-		return i;
+		return idx;
 	}
 
-	size_t Union( size_t s1, size_t s2 )
+	int Union( int s1, int s2 )
 	{
+		if (s1 < 0) return s2;
+		if (s2 < 0) return s1;
+
 		auto rs1 = FindSet( s1 );
 		auto rs2 = FindSet( s2 );
+		if (rs1 < 0) return rs2;
+		if (rs2 < 0) return rs1;
+
 		if (rs1 == rs2) return rs1;
 
 		--count_distinct;
@@ -40,20 +48,27 @@ public:
 		}
 	}
 
-	size_t FindSet( size_t s ) const
+	bool HasSet( int s ) const
 	{
+		return s >= 0 and root.find( s ) != root.end();
+	}
+
+	int FindSet( int s ) const
+	{
+		if (!HasSet( s )) return -1;
+
 		if (root[s] == s) return s;
 
 		root[s] = FindSet( root[s] );
 		return root[s];
 	}
 
-	bool IsSameSet( size_t s1, size_t s2 ) const
+	bool IsSameSet( int s1, int s2 ) const
 	{
 		return FindSet( s1 ) == FindSet( s2 );
 	}
 
-	size_t getCountDistinct() const { 
-		return count_distinct; 
+	int getCountDistinct() const {
+		return count_distinct;
 	}
 };
