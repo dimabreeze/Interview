@@ -13,9 +13,9 @@ vector<vector<int>> Solution::multiply( vector<vector<int>> A, vector<vector<int
 	const auto toSparse = []( const vector<vector<int>>& matrix )
 	{
 		Sparse res;
-		for (int r = 0; r < matrix.size(); ++r)
+		for (size_t r = 0; r < matrix.size(); ++r)
 		{
-			for (int c = 0; c < matrix[0].size(); ++c)
+			for (size_t c = 0; c < matrix[0].size(); ++c)
 			{
 				auto v = matrix[r][c];
 				if (v) res[r][c] = v;

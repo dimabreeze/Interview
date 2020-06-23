@@ -8,7 +8,7 @@ using namespace Leetcode::LC953E;
 
 bool Solution::isAlienSorted( vector<string> words, string order ) const {
 	unordered_map<char, int> positions; /*letter->order*/
-	for (int pos = 0; pos < order.size(); ++pos)
+	for (size_t pos = 0; pos < order.size(); ++pos)
 	{
 		positions[order[pos]] = pos;
 	}
@@ -18,7 +18,7 @@ bool Solution::isAlienSorted( vector<string> words, string order ) const {
 		const auto sl = lhs.size();
 		const auto sr = rhs.size();
 
-		for (int i = 0; i < min( sl, sr ); ++i)
+		for (size_t i = 0; i < min( sl, sr ); ++i)
 		{
 			if (lhs[i] == rhs[i]) continue;
 			return positions[lhs[i]] < positions[rhs[i]];
@@ -27,7 +27,7 @@ bool Solution::isAlienSorted( vector<string> words, string order ) const {
 		return sl < sr;
 	};
 
-	for (int pos = 1; pos < words.size(); ++pos)
+	for (size_t pos = 1; pos < words.size(); ++pos)
 	{
 		if (less(words[pos],words[pos - 1])) return false;
 	}

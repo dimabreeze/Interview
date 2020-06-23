@@ -23,7 +23,7 @@ int Solution::largestRectangleArea( std::vector<int> heights ) const
 	std::vector<int> smallerR( heights.size(), heights.size() ); //pos of smaller element on the R
 	for (int i = heights.size() - 2; i >= 0; --i)
 	{
-		int r = i + 1;
+		size_t r = i + 1;
 		while (r < heights.size() and heights[r] >= heights[i])
 		{
 			r = smallerR[r]; //rather than constantly increasing [r] we jump to next 'less'
@@ -32,7 +32,7 @@ int Solution::largestRectangleArea( std::vector<int> heights ) const
 	}
 
 	int result = 0;
-	for (int idx = 0; idx < heights.size(); ++idx)
+	for (size_t idx = 0; idx < heights.size(); ++idx)
 	{
 		const auto H = heights[idx];
 		const auto W = smallerR[idx] - smallerL[idx] - 1; //pos of smaller element on the R / L

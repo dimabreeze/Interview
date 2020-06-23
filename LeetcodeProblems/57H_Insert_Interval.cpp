@@ -8,7 +8,7 @@ Solution::Intervals Solution::insert( const Intervals& intervals, Interval newIn
 	res.reserve( intervals.size() + 1 );
 
 	bool merged = false;
-	for (int idx = 0; idx < intervals.size(); ++idx)
+	for (size_t idx = 0; idx < intervals.size(); ++idx)
 	{
 		auto& interval = intervals[idx];
 		if (interval[1] < newInterval[0] or newInterval[1] < interval[0])

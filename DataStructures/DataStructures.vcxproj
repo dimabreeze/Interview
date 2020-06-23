@@ -159,11 +159,14 @@
     <ClInclude Include="BitManipulation.h" />
     <ClInclude Include="CompressString.h" />
     <ClInclude Include="DisjointSets.h" />
+    <ClInclude Include="FenwickTree.h" />
     <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Geometry.h" />
     <ClInclude Include="HashSet.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="QuickSelect.h" />
     <ClInclude Include="ReservoirSampling.h" />
     <ClInclude Include="SinglyLinkedList.h" />
     <ClInclude Include="Trie.h" />

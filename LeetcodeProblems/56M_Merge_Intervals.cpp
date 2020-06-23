@@ -47,7 +47,7 @@ std::vector<std::vector<int>> Solution::merge( std::vector<std::vector<int>> int
 	sort( intervals.begin(), intervals.end(), cmp{} ); //O(NlogN)
 
 	ans.push_back( intervals[0] );
-	for (int idx = 1; idx < intervals.size(); ++idx)
+	for (size_t idx = 1; idx < intervals.size(); ++idx)
 	{
 		const auto& i = intervals[idx]; //current interval
 		if (overlap( i, ans.back() )) ans.back()[1] = intersection( i, ans.back() )[1];

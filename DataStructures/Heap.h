@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <vector>
 #include <algorithm>
 #include <queue>
@@ -31,6 +31,16 @@ struct Heap
 	}
 
 	T pop() {
+/*
+Heap_Extract_Max(A)
+  if A.heap_size[A] < 1
+	then error "Куча пуста"
+  max ← A[1]
+  A[1] ← A[A.heap_size]
+  A.heap_size ← A.heap_size-1
+  Heapify(A, 1)
+  return max
+*/
 		T topValue = top();
 		data.front() = data.back();
 		data.pop_back();
@@ -40,6 +50,12 @@ struct Heap
 
 	static Heap buildFrom( const std::vector<T>& vec )
 	{
+/*
+Build_Heap(A)
+  A.heap_size ← A.length
+  for i ← ⌊A.length/2⌋ downto 1
+	do Heapify(A, i)
+*/
 		Heap h;
 		h.data = vec;
 		for (size_t i = 0; i < h.size() / 2; ++i)
@@ -59,6 +75,20 @@ struct Heap
 
 
 private:
+/*
+Heapify(Array, i)
+  left ← 2i
+  right ← 2i+1
+  heap_size - количество элементов в куче
+  largest ← i
+  if left ≤ Array.heap_size and Array[left] > Array[largest]
+	then largest ← left
+  if right ≤ Array.heap_size and Array[right] > Array[largest]
+	then largest ← right
+  if largest ≠ i
+	then Swap Array[i] ↔ Array[largest]
+		 Heapify(Array, largest)
+*/
 	void heapify(size_t idx) {
 		Cmp cmp;
 		while (true)
@@ -78,6 +108,11 @@ private:
 			std::swap( getValue( idx ), getValue( toppestChild ) );
 			idx = toppestChild;
 		}
+	}
+
+	std::vector<T>& getData()
+	{
+		return data;
 	}
 
 private:

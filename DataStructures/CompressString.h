@@ -33,7 +33,7 @@ struct CompressString
 
 		char previous = str[0];
 		int count = 1;
-		for (int i = 1; i < str.size(); ++i)
+		for (size_t i = 1; i < str.size(); ++i)
 		{
 			auto c = str[i];
 			if (c == previous) ++count;

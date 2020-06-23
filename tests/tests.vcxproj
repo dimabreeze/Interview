@@ -171,7 +171,9 @@
     <ClCompile Include="test_BitManipulation.cpp" />
     <ClCompile Include="test_CompressString.cpp" />
     <ClCompile Include="test_DisjointSets.cpp" />
+    <ClCompile Include="test_FenwickTree.cpp" />
     <ClCompile Include="test_Fibonacci.cpp" />
+    <ClCompile Include="test_Geometry.cpp" />
     <ClCompile Include="test_Heap.cpp" />
     <ClCompile Include="test_SinglyLinkedList.cpp" />
     <ClCompile Include="testmain.cpp" />

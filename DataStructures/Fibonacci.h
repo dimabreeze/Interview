@@ -3,7 +3,7 @@
 
 namespace Algorithms
 {
-	int fib_recursive( int n )
+	int fib_recursive( size_t n )
 	{
 		if (n == 0) return 0;
 		if (n == 1) return 1;
@@ -18,7 +18,7 @@ namespace Algorithms
 		return value;
 	}
 
-	int fib_iterative( int n )
+	int fib_iterative( size_t n )
 	{
 		if (n == 0) return 0;
 		if (n == 1) return 1;

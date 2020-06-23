@@ -29,7 +29,7 @@ namespace
 		return iter->second;
 	};
 
-	std::string substring( std::string s, int l, int r ) {
+	std::string substring( std::string s, size_t l, size_t r ) {
 		std::string ans;
 		for (; l >= 0 and l <= r and r < s.size(); ++l)
 		{
@@ -44,7 +44,7 @@ std::string Solution76::minWindow( std::string s, std::string t ) const {
 	std::unordered_map<char, int> map;
 	for (auto c : t) ++map[c];
 
-	int counter = t.size(), begin = 0, end = 0, d = INT_MAX, head = 0;
+	size_t counter = t.size(), begin = 0, end = 0, d = INT_MAX, head = 0;
 	while (end < s.size()) {
 		const auto c_end   = s[end++];
 		if (map[c_end]-- > 0)

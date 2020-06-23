@@ -1,14 +1,15 @@
 #pragma once
 
-template<typename T>
-struct Node {
-	Node( T value ) : val( value ) {};
-	T val;
-	Node* next = nullptr;
+
+struct ListNode {
+	ListNode() {};
+	ListNode( int value ) : val( value ) {};
+	int val = 0;
+	ListNode* next = nullptr;
 };
 
-template<typename T>
-Node<T>* advance( Node<T>* head, size_t steps )
+
+ListNode* advance( ListNode* head, size_t steps )
 {
 	while(steps--> 0 && head)
 	{
@@ -17,10 +18,12 @@ Node<T>* advance( Node<T>* head, size_t steps )
 	return head;
 }
 
-template<typename T>
-Node<T>* reverse( Node<T>* head )
+
+ListNode* reverse( ListNode* head )
 {
-	Node<T>* prev = nullptr;
+	if (!head or !head->next) return head;
+
+	ListNode* prev = nullptr;
 	auto node = head;
 	while (node)
 	{
@@ -32,10 +35,39 @@ Node<T>* reverse( Node<T>* head )
 	return prev;
 }
 
-template<typename T>
-Node<T>* merge_two_sorted( Node<T>* head1, Node<T>* head2 )
+ListNode* reverse_recursive( ListNode* head ) {
+	if (!head) return head;
+	if (!head->next) return head;
+
+	ListNode* newhead = reverse_recursive( head->next );
+	head->next->next = head;
+	head->next = nullptr;
+
+	return newhead;
+}
+
+ListNode* reverse_range( ListNode* begin, ListNode* end = nullptr )
 {
-	auto dummy = Node<T>{ 0 };
+	if (!begin or !begin->next) return begin;
+
+	ListNode* prev = nullptr;
+	auto node = begin;
+	while (node and node != end)
+	{
+		auto next = node->next;
+		node->next = prev;
+		prev = node;
+		node = next;
+	}
+	begin->next = end;
+	return prev;
+}
+
+
+
+ListNode* merge_two_sorted( ListNode* head1, ListNode* head2 )
+{
+	ListNode dummy;
 	auto prev = &dummy;
 
 	auto l1 = head1;
@@ -62,8 +94,8 @@ Node<T>* merge_two_sorted( Node<T>* head1, Node<T>* head2 )
 }
 
 
-//template<typename T>
-//Node<T>* merge_two_one_by_one( Node<T>* l1, Node<T>* l2 )
+//
+//Node* merge_two_one_by_one( Node* l1, Node* l2 )
 //{
 //	if (!l1) return l2;
 //	if (!l2) return l1;
@@ -71,8 +103,8 @@ Node<T>* merge_two_sorted( Node<T>* head1, Node<T>* head2 )
 //	auto l1 = head1, next1 = l1->next;
 //	auto l2 = head2, next2 = l2->next;
 //
-//	Node<T> dummy{ 0 };
-//	Node<T>** tail = dummy.next;
+//	Node<int> dummy{ 0 };
+//	Node** tail = dummy.next;
 ///*
 //	a0>a1>a2>a3>null
 //	   ^ n=a2
@@ -86,7 +118,7 @@ Node<T>* merge_two_sorted( Node<T>* head1, Node<T>* head2 )
 //*/
 //	while (l1 and l2)
 //	{
-//		Node<T>* tmp_next = nullptr;
+//		Node* tmp_next = nullptr;
 //
 //		*tail = l1; //dummy->next = l1>...
 //		tmp_next = l1->next;
@@ -122,13 +154,13 @@ Node<T>* merge_two_sorted( Node<T>* head1, Node<T>* head2 )
 //	return head1;
 //}
 
-template<typename T>
-Node<T>* median( Node<T>* head ) //T: O(N/2) ~ O(N), M: O(1)
+
+ListNode* median( ListNode* head ) //int: O(N/2) ~ O(N), M: O(1)
 {
 	if (!head or !head->next) return head;
 
-	Node<T>* slow = head;
-	Node<T>* fast = head;
+	ListNode* slow = head;
+	ListNode* fast = head;
 	while (fast and fast->next)
 	{
 		slow = slow->next;

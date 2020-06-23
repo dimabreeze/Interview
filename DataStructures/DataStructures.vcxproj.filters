@@ -54,6 +54,15 @@
     <ClInclude Include="DisjointSets.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FenwickTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickSelect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructures.cpp">
