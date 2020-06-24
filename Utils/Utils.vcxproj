@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{FE642528-09E0-49F6-85CD-E9B0766B0DFE}</ProjectGuid>
+    <ProjectGuid>{92A48460-71C9-4048-AA6E-23A843B10B26}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>LeetcodeProblems</RootNamespace>
+    <RootNamespace>Utils</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,10 +70,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -82,13 +82,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -97,13 +97,13 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -151,46 +151,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="273H_Integer_to_English_Words.h" />
-    <ClInclude Include="311M_Sparse_Matrix_Multiplication.h" />
-    <ClInclude Include="37H_Sudoku_Solver.h" />
-    <ClInclude Include="415E_Add_Strings.h" />
-    <ClInclude Include="56M_Merge_Intervals.h" />
-    <ClInclude Include="57H_Insert_Interval.h" />
-    <ClInclude Include="621M_Task_Scheduler.h" />
-    <ClInclude Include="76M_Minimum_Window_Substring.h" />
-    <ClInclude Include="84H_Largest_Rectangle_in_Histogram.h" />
-    <ClInclude Include="223M_Rectangle_Area.h" />
-    <ClInclude Include="953E_Verifying_an_Alien_Dictionary.h" />
-    <ClInclude Include="989E_Add_to_Array_Form_of_Integer.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="37H_Sudoku_Solver.cpp" />
-    <ClCompile Include="56M_Merge_Intervals.cpp" />
-    <ClCompile Include="57H_Insert_Interval.cpp" />
-    <ClCompile Include="76M_Minimum_Window_Substring.cpp" />
-    <ClCompile Include="84H_Largest_Rectangle_in_Histogram.cpp" />
-    <ClCompile Include="223M_Rectangle_Area.cpp" />
-    <ClCompile Include="LeetcodeProblems.cpp" />
     <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="953E_Verifying_an_Alien_Dictionary.cpp" />
-    <ClCompile Include="311M_Sparse_Matrix_Multiplication.cpp" />
-    <ClCompile Include="621M_Task_Scheduler.cpp" />
-    <ClCompile Include="415E_Add_Strings.cpp" />
-    <ClCompile Include="989E_Add_to_Array_Form_of_Integer.cpp" />
-    <ClCompile Include="273H_Integer_to_English_Words.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Utils\Utils.vcxproj">
-      <Project>{92a48460-71c9-4048-aa6e-23a843b10b26}</Project>
-    </ProjectReference>
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

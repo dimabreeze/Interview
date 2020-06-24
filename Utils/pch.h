@@ -10,22 +10,4 @@
 // add headers that you want to pre-compile here
 #include "framework.h"
 
-// STL:
-#include <vector>
-#include <list>
-
-#include <map>
-#include <set>
-#include <unordered_map>
-#include <unordered_set>
-
-#include <functional>
-#include <algorithm>
-#include <iostream>
-#include <string>
-
-#include <chrono>
-#include <thread>
-
-
 #endif //PCH_H

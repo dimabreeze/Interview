@@ -157,6 +157,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="test_273H_Integer_to_English_Words.cpp" />
+    <ClCompile Include="test_37H_Sudoku_Solver.cpp" />
     <ClCompile Include="test_989E_Add_to_Array_Form_of_Integer.cpp" />
     <ClCompile Include="test_223M_Rectangle_Area.cpp" />
     <ClCompile Include="test_311M_Sparse_Matrix_Multiplication.cpp" />
