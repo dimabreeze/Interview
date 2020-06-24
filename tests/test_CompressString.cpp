@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include "DataStructures\CompressString.h"
+#include "Algorithms\CompressString.h"
 
 TEST_CASE( "CompressString: fun_ptr", "[coding]" )
 {

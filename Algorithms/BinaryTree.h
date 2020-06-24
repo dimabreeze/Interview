@@ -1,7 +1,9 @@
 ﻿#pragma once
 
 #include <unordered_set>
+#include <unordered_map>
 #include <stack>
+#include <tuple>
 #include <queue>
 #include <algorithm>
 #include <functional>
@@ -348,4 +350,178 @@ TreeNode* deleteNode( TreeNode* root, int target ) {
 	else
 		// find target in right subtree if key > root->val
 		root->right = deleteNode( root->right, target );
+}
+
+bool is_binarytree( std::vector<TreeNode*> arr )
+{
+	using namespace std;
+	unordered_map<TreeNode*, int> incoming_links;
+	for (auto node : arr)
+	{
+		incoming_links.insert( { node, 0 } );
+		if (node->left  and ++incoming_links[node->left]  > 1)
+				return false;
+		if (node->right and ++incoming_links[node->right] > 1)
+				return false;
+	}
+
+	bool foundRoot = false;
+	for (auto pair : incoming_links)
+	{
+		TreeNode* root = pair.first;
+		int count = pair.second;
+		if (count == 0)
+		{
+			queue<TreeNode*> q;
+			q.push( root );
+			while (!q.empty())
+			{
+				auto node = q.front(); q.pop();
+				auto& incoming = incoming_links[node];
+
+				if (incoming == 0)
+				{
+					if (foundRoot) return false;
+					foundRoot = true;
+				}
+
+				if (incoming < 0) continue; //visited
+				incoming = 0 - incoming;
+
+				if (node->left)
+				{
+					q.push( node->left );
+				}
+				if (node->right)
+				{
+					q.push( node->right );
+				}
+			}
+		}
+	}
+	
+	if (!foundRoot) return false;
+	for (auto pair : incoming_links)
+	{
+		if (pair.second > 0) return false;
+	}
+
+	return true;
+
+}
+
+TreeNode* LCA_recursive( TreeNode* root, TreeNode* n1, TreeNode* n2 )
+{
+	if (!root) return nullptr;
+
+	if (root == n1 or root == n2) return root;
+
+	auto l = LCA_recursive( root->left, n1, n2 );
+	auto r = LCA_recursive( root->right, n1, n2 );
+
+	if (l and r) return root;
+	if (l) return l;
+	if (r) return r;
+
+	return nullptr;
+}
+
+namespace
+{
+	static bool LCA_recursive2_helper( std::vector<TreeNode*>& parent_stack, TreeNode* root, TreeNode* target ) {
+		parent_stack.push_back( root );
+		if (root == target)
+			return true;
+
+		if (root->left and LCA_recursive2_helper( parent_stack, root->left, target ))
+			return true;
+		if (root->right and LCA_recursive2_helper( parent_stack, root->right, target ))
+			return true;
+
+		parent_stack.pop_back();
+		return false;
+	};
+}
+
+TreeNode* LCA_recursive2( TreeNode* root, TreeNode* n1, TreeNode* n2 ) {
+	std::vector<TreeNode*> parent_s1;
+	std::vector<TreeNode*> parent_s2;
+
+	LCA_recursive2_helper( parent_s1, root, n1 );
+	LCA_recursive2_helper( parent_s2, root, n2 );
+
+	TreeNode* lastCommonNode = nullptr;
+	for (size_t i = 0; i < std::min( parent_s1.size(), parent_s2.size() ); ++i)
+	{
+		auto node1 = parent_s1[i];
+		auto node2 = parent_s2[i];
+		if (node1 != node2) break;
+
+		lastCommonNode = node1; //choose any because they are equal here
+	}
+	return lastCommonNode;
+
+}
+
+// Builds a child->parent links (in a hashtable)
+// Finds n1 and n2
+// Walks from n1 bottom-up to root to inserts all ancestors into a hashset
+// Walks from n2 bottom-up to root and checks if ancestor is in a hashset. Returns first match
+TreeNode* LCA_iterative1( TreeNode* root, TreeNode* n1, TreeNode* n2 ) {
+	std::unordered_map<TreeNode*, TreeNode*> parent{ {root, nullptr} };
+
+	bool found1 = false;
+	bool found2 = false;
+
+	{   // limit the scope of stack
+		std::stack<TreeNode*> st;
+		st.push( root );
+
+		while (!st.empty())
+		{
+			auto node = st.top(); st.pop();
+			if (!found1 and node == n1)
+				found1 = true;
+			if (!found2 and node == n2)
+				found2 = true;
+
+			if (found1 and found2)
+				break;
+
+			if (node->right)
+			{
+				parent[node->right] = node;
+				st.push( node->right );
+			}
+			if (node->left)
+			{
+				parent[node->left] = node;
+				st.push( node->left );
+			}
+		}
+	}   // limit the scope of stack
+
+
+	std::unordered_set<TreeNode*> anc1;
+
+	TreeNode* node = nullptr;
+	node = n1;
+	while (node)
+	{
+		anc1.insert( node );
+		node = parent[node];
+	}
+
+	node = n2;
+	while (node)
+	{
+		auto iter = anc1.find( node );
+		if (iter != anc1.end())
+		{
+			return *iter;
+		}
+		node = parent[node];
+	}
+
+	return root; // not functionally necessary, but required for compilation
 }

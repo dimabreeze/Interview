@@ -185,7 +185,7 @@
     <None Include="..\ReferenceTests.runsettings" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataStructures\DataStructures.vcxproj">
+    <ProjectReference Include="..\Algorithms\Algorithms.vcxproj">
       <Project>{2b43328b-be93-4aa4-84af-e0077f34a394}</Project>
     </ProjectReference>
     <ProjectReference Include="..\LeetcodeProblems\LeetcodeProblems.vcxproj">

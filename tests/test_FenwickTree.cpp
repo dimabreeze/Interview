@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include "DataStructures\FenwickTree.h"
+#include "Algorithms\FenwickTree.h"
 
 using namespace std;
 

@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include "DataStructures\Fibonacci.h"
+#include "Algorithms\Fibonacci.h"
 
 using namespace Algorithms;
 

@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include "DataStructures\Trie.h"
+#include "Algorithms\Trie.h"
 
 #include <string>
 /*

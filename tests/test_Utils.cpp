@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include "DataStructures\Utils.h"
+#include "Algorithms\Utils.h"
 
 #include <queue>
 

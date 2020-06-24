@@ -10,6 +10,8 @@
 template<typename T, typename Cmp = std::less<T>>
 struct Heap
 {
+
+
 	void add( T value )
 	{
 		data.push_back( value );
@@ -34,7 +36,7 @@ struct Heap
 /*
 Heap_Extract_Max(A)
   if A.heap_size[A] < 1
-	then error "Куча пуста"
+	then error "Empty heap"
   max ← A[1]
   A[1] ← A[A.heap_size]
   A.heap_size ← A.heap_size-1
@@ -53,7 +55,7 @@ Heap_Extract_Max(A)
 /*
 Build_Heap(A)
   A.heap_size ← A.length
-  for i ← ⌊A.length/2⌋ downto 1
+  for i ← ⌊A.length/2 downto 1
 	do Heapify(A, i)
 */
 		Heap h;

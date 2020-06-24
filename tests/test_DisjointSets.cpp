@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include "DataStructures\DisjointSets.h"
+#include "Algorithms\DisjointSets.h"
 
 using namespace std;
 

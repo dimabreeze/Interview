@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include "DataStructures\SinglyLinkedList.h"
+#include "Algorithms\SinglyLinkedList.h"
 
 TEST_CASE( "List: advance", "[list][algo]" ) {
 	ListNode* p0 = nullptr;

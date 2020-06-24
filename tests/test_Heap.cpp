@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include "DataStructures\Heap.h"
+#include "Algorithms\Heap.h"
 
 TEST_CASE( "Heap (max)", "[heap]" )
 {

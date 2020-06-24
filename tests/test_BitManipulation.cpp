@@ -1,5 +1,5 @@
 #include <catch2/catch.hpp>
-#include "DataStructures/BitManipulation.h"
+#include "Algorithms/BitManipulation.h"
 
 TEST_CASE( "Bit Manipulation: clear least significant bit", "[algo][bits]" )
 {

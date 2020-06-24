@@ -1,6 +1,6 @@
 #include <catch2/catch.hpp>
 #include <sstream>
-#include "DataStructures\BinaryTree.h"
+#include "Algorithms\BinaryTree.h"
 
 using namespace std;
 using namespace std::placeholders;
@@ -107,3 +107,75 @@ TEST_CASE( "BinaryTree: traversal", "[BinaryTree][traversal]" ) {
 	}
 }
 
+TEST_CASE( "BinaryTree: is_binarytree", "[BinaryTree]" ) {
+	struct RAII_helper
+	{
+		RAII_helper( vector<TreeNode*>& arr ) : mref( arr )
+		{}
+
+		~RAII_helper()
+		{
+			for (auto node : mref) delete node;
+		}
+	private:
+		vector<TreeNode*>& mref;
+	};
+
+	SECTION( "binary tree" )
+	{
+		auto n0 = new TreeNode( 0 );
+		auto n1 = new TreeNode( 1 );
+		auto n2 = new TreeNode( 2 );
+		auto n3 = new TreeNode( 3 );
+		auto n4 = new TreeNode( 4 );
+		auto n5 = new TreeNode( 5 );
+		auto n6 = new TreeNode( 6 );
+		n0->left = n1;
+		n0->right = n2;
+		n1->left = n3;
+		n3->right = n6;
+		n2->left = n4;
+		n2->right = n5;
+
+		vector<TreeNode*> arr{ n0, n1, n2, n3, n4, n5, n6 };
+		RAII_helper helper( arr );
+		CHECK( is_binarytree( arr ) == true );
+	}
+	SECTION( "cycle to root" )
+	{
+		auto n0 = new TreeNode( 0 );
+		auto n1 = new TreeNode( 1 );
+		auto n2 = new TreeNode( 2 );
+		auto n3 = new TreeNode( 3 );
+		n0->left = n1;
+		n1->left = n2;
+		n2->left = n0;
+
+		vector<TreeNode*> arr{ n0, n1, n2, n3 };
+		RAII_helper helper( arr );
+		CHECK( is_binarytree( arr ) == false );
+	}
+	SECTION( "cycle to root 2" )
+	{
+		auto n0 = new TreeNode( 0 );
+		auto n1 = new TreeNode( 1 );
+		auto n2 = new TreeNode( 2 );
+		auto n3 = new TreeNode( 3 );
+		n0->left = n1;
+		n1->right = n0;
+
+		vector<TreeNode*> arr{ n0, n1 };
+		RAII_helper helper( arr );
+		CHECK( is_binarytree( arr ) == false );
+	}
+
+	SECTION( "multiple roots" )
+	{
+		auto n0 = new TreeNode( 0 );
+		auto n1 = new TreeNode( 1 );
+
+		vector<TreeNode*> arr{ n0, n1 };
+		RAII_helper helper( arr );
+		CHECK( is_binarytree( arr ) == false );
+	}
+}

@@ -8,7 +8,7 @@ struct FenwickTree
 	 * Start from index+1 if you updating index in original array. Keep adding this value
 	 * for next node till you reach outside range of tree
 	 */
-	static void updateBinaryIndexedTree( std::vector<int>& binaryIndexedTree, int val, int index ) {
+	static void updateBinaryIndexedTree( std::vector<int>& binaryIndexedTree, int val, size_t index ) {
 		while (index < binaryIndexedTree.size()) {
 			binaryIndexedTree[index] += val;
 			index = getNext( index );
@@ -19,7 +19,7 @@ struct FenwickTree
 	 * Start from index+1 if you want prefix sum 0 to index. Keep adding value
 	 * till you reach 0
 	 */
-	static int getSum( const std::vector<int>& binaryIndexedTree, int index ) {
+	static int getSum( const std::vector<int>& binaryIndexedTree, size_t index ) {
 		index = index + 1;
 		int sum = 0;
 		while (index > 0) {
@@ -34,7 +34,7 @@ struct FenwickTree
 	 */
 	static std::vector<int> createTree( std::vector<int> input ) {
 		std::vector<int> binaryIndexedTree( input.size() + 1 );
-		for (int i = 1; i <= input.size(); i++) {
+		for (size_t i = 1; i <= input.size(); i++) {
 			updateBinaryIndexedTree( binaryIndexedTree, input[i - 1], i );
 		}
 		return binaryIndexedTree;

@@ -1,6 +1,6 @@
 #include <catch2/catch.hpp>
 #include <sstream>
-#include "DataStructures\Geometry.h"
+#include "Algorithms\Geometry.h"
 
 using namespace std;
 

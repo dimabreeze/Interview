@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "tests\tests.vcxpro
 		{2B43328B-BE93-4AA4-84AF-E0077F34A394} = {2B43328B-BE93-4AA4-84AF-E0077F34A394}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataStructures", "DataStructures\DataStructures.vcxproj", "{2B43328B-BE93-4AA4-84AF-E0077F34A394}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithms", "Algorithms\Algorithms.vcxproj", "{2B43328B-BE93-4AA4-84AF-E0077F34A394}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LeetcodeProblems", "LeetcodeProblems\LeetcodeProblems.vcxproj", "{FE642528-09E0-49F6-85CD-E9B0766B0DFE}"
 	ProjectSection(ProjectDependencies) = postProject
