@@ -167,7 +167,7 @@
     <ClInclude Include="HashSet.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="QuickSelect.h" />
+    <ClInclude Include="quick_select_sort.h" />
     <ClInclude Include="ReservoirSampling.h" />
     <ClInclude Include="SinglyLinkedList.h" />
     <ClInclude Include="Trie.h" />

@@ -57,10 +57,10 @@
     <ClInclude Include="FenwickTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="QuickSelect.h">
+    <ClInclude Include="Geometry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Geometry.h">
+    <ClInclude Include="quick_select_sort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
